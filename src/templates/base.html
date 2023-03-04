@@ -1,0 +1,23 @@
+{% load static %}
+{% load sass_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% sass_src 'scss/base.scss' %}" />
+    {% block links %}{% endblock %}
+    <script src="{% static 'js/htmx.min.js' %}"></script>
+    {% block scripts %}{% endblock %}
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+</body>
+
+</html>
