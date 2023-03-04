@@ -21,6 +21,7 @@ cd $app_name
 # Set up templates, static and tests folder structure
 echo "Setting up templates, static and tests folder structures..."
 mkdir templates
+mkdir templates/partials
 mkdir tests
 touch tests/__init__.py
 touch tests/test_views.py
